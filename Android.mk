@@ -1,0 +1,13 @@
+LOCAL_PATH:= $(call my-dir)
+include $(CLEAR_VARS)
+
+LOCAL_CFLAGS += $(USERLAND_CFLAGS)
+LOCAL_C_INCLUDES += $(USERLAND_INCLUDES)
+
+LOCAL_MODULE := libgralloc_brcm
+LOCAL_SRC_FILES := gralloc_brcm.cpp
+LOCAL_SHARED_LIBRARIES := libbcm_host libvchostif
+LOCAL_CFLAGS:= -DLOG_TAG=\"$(TARGET_BOARD_PLATFORM).brcm\"
+LOCAL_MODULE_TAGS := optional
+
+include $(BUILD_SHARED_LIBRARY)
