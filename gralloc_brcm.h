@@ -23,6 +23,10 @@ typedef struct gralloc_private_handle_t {
 
 } gralloc_private_handle_t;
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 gralloc_private_handle_t* gralloc_private_handle_from_client_buffer(EGLClientBuffer buffer);
 
 uint32_t gralloc_private_handle_get_res_type(gralloc_private_handle_t* private_handle);
@@ -30,5 +34,9 @@ uint32_t gralloc_private_handle_get_res_type(gralloc_private_handle_t* private_h
 uint32_t gralloc_private_handle_get_vc_handle(gralloc_private_handle_t *private_handle);
 
 uint32_t gralloc_private_handle_get_egl_image(gralloc_private_handle_t *private_handle);
+
+#ifdef __cplusplus
+};
+#endif
 
 #endif //_GRALLOC_BRCM_H
