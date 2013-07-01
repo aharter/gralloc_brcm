@@ -9,6 +9,7 @@ const int GRALLOC_PRIV_TYPE_MM_RESOURCE = 0;
 const int GRALLOC_PRIV_TYPE_GL_RESOURCE = 1;
 
 const int GRALLOC_MAGICS_HAL_PIXEL_FORMAT_OPAQUE = 0;
+const int GRALLOC_MAGICS_HAL_PIXEL_FORMAT_TRANSLUCENT = 1;
 
 typedef struct gralloc_private_handle_t {
 
