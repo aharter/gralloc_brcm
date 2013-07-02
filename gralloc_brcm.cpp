@@ -21,9 +21,8 @@ uint32_t allocate_and_set_vc_handle(gralloc_private_handle_t *private_handle) {
     return vc_handle;
 }
 
-int gralloc_get_gl_format(int android_buffer_format){
-    switch (android_buffer_format)
-    {
+int gralloc_get_gl_format(int android_buffer_format) {
+    switch (android_buffer_format) {
         case PIXEL_FORMAT_RGBA_8888:
         case PIXEL_FORMAT_BGRA_8888:
         case PIXEL_FORMAT_RGBA_5551:
