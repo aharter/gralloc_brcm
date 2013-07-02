@@ -23,20 +23,16 @@ uint32_t allocate_and_set_vc_handle(gralloc_private_handle_t *private_handle) {
 
 int gralloc_get_gl_format(int android_buffer_format){
     switch (android_buffer_format)
-		{
-		  case PIXEL_FORMAT_RGBA_8888:
-		  case PIXEL_FORMAT_BGRA_8888:
-		  case PIXEL_FORMAT_RGBA_5551:
-		  case PIXEL_FORMAT_TRANSLUCENT:
-		  case PIXEL_FORMAT_TRANSPARENT:
-		  case PIXEL_FORMAT_RGBA_4444:	return GRALLOC_MAGICS_HAL_PIXEL_FORMAT_TRANSLUCENT;
+    {
+        case PIXEL_FORMAT_RGBA_8888:
+        case PIXEL_FORMAT_BGRA_8888:
+        case PIXEL_FORMAT_RGBA_5551:
+        case PIXEL_FORMAT_TRANSLUCENT:
+        case PIXEL_FORMAT_TRANSPARENT:
+        case PIXEL_FORMAT_RGBA_4444:    return GRALLOC_MAGICS_HAL_PIXEL_FORMAT_TRANSLUCENT;
 
-		  case PIXEL_FORMAT_OPAQUE:
-		  case PIXEL_FORMAT_RGBX_8888:
-		  case PIXEL_FORMAT_RGB_565:
-		  case PIXEL_FORMAT_RGB_888:    
-		  default :                     return GRALLOC_MAGICS_HAL_PIXEL_FORMAT_OPAQUE;
-	    }
+        default:                        return GRALLOC_MAGICS_HAL_PIXEL_FORMAT_OPAQUE;
+    }
 }
 
 gralloc_private_handle_t* gralloc_private_handle_from_client_buffer(EGLClientBuffer buffer) {
